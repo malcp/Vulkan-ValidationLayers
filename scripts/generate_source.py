@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020 The Khronos Group Inc.
-# Copyright (c) 2020 Valve Corporation
-# Copyright (c) 2020 LunarG, Inc.
-# Copyright (c) 2020 Google Inc.
+# Copyright (c) 2021 The Khronos Group Inc.
+# Copyright (c) 2021 Valve Corporation
+# Copyright (c) 2021 LunarG, Inc.
+# Copyright (c) 2021 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -45,6 +45,7 @@ def main(argv):
                    '-quiet',
                    filename] for filename in ["chassis.cpp",
                                               "chassis.h",
+                                              "chassis_dispatch_helper.h",
                                               "layer_chassis_dispatch.cpp",
                                               "layer_chassis_dispatch.h",
                                               "object_tracker.cpp",

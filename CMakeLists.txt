@@ -1,6 +1,6 @@
 # ~~~
-# Copyright (c) 2014-2020 Valve Corporation
-# Copyright (c) 2014-2020 LunarG, Inc.
+# Copyright (c) 2014-2021 Valve Corporation
+# Copyright (c) 2014-2021 LunarG, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -130,7 +130,6 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID MATCHES "Clang")
 
     set(CMAKE_C_STANDARD 99)
     set(CMAKE_CXX_STANDARD 11)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti")
 
     # For GCC version 7.1 or greater, we need to disable the implicit fallthrough warning since there's no consistent way to satisfy
     # all compilers until they all accept the C++17 standard.
@@ -140,8 +139,6 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID MATCHES "Clang")
 elseif(MSVC)
     # Treat warnings as errors
     add_compile_options("/WX")
-    # Disable RTTI
-    add_compile_options("/GR-")
     # Warn about nested declarations
     add_compile_options("/w34456")
     # Warn about potentially uninitialized variables
